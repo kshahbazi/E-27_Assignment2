@@ -1,0 +1,158 @@
+/* Border box declaration */
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after */
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-family: Arial, Geneva, sans-serif;
+	background-color: #B1D3EE;
+	font-size: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Cabin Condensed', sans-serif;
+}
+a {
+	color: #2772B0;
+}
+.wrapper {
+	width: 97%; /*could be 100%*/
+	max-width: 1200px;
+	margin: 0 auto;
+	float: none;
+	background-color: #fff;
+
+}
+header {
+	background: url(../img/boston-1200.jpg) no-repeat;
+	width: 100%; /*as wide as the .wrapper*/
+	height: 218px; /*as tall as it needs to be i.e. the height of the text inside*/
+	font-family: 'Cabin Condensed', sans-serif; 
+	color: #fff;
+}
+header h1 {
+	padding: 0.5em;
+	margin: 0;
+}
+header h1 a {
+	color: #fff;
+	text-decoration: none;
+}
+nav {
+	background-color: #ED8F00;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: auto;
+}
+nav ul li {
+	font-family: 'Cabin Condensed', sans-serif;
+}
+nav ul a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 1em;
+	float: left;
+}
+nav ul a:hover {
+	color: #a16100;
+}
+/*main {
+	overflow: auto;
+	padding-right: 3em;
+	background-color: #EFECCA;
+}*/
+.wrapper h4 {
+	font-size: 1.55em;
+	margin: .1em;
+}
+.wrapper h5 {
+	font-size: .75em;
+	margin-top: .1em;
+}
+
+div img {
+	width:100%;
+	margin-bottom: 0px;
+	/*max-width: 225px;*/
+}
+div {
+	float: left;
+	/*width: 250px;*/
+	margin-left: 1.5em;
+}
+footer {
+	clear: both;
+	padding: 2em 0;
+	margin: 3em 0;
+	color: #999;
+	text-align: center;
+}
+/* grid system */
+.row:after {
+  content: "";
+  display: table; 
+  clear: both;
+}
+
+[class *='col-']{
+	float:left;
+	margin-left:3.33333%; /*Sass will only look at five digits after decimal*/
+	min-height: 1px;
+}
+.col-1{
+	width: 21%;
+	height: 355px;
+	border-bottom: 2px solid black;
+	/*background-color: #ccf;*/
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px)  { 
+	[class*='col-'] {  
+		float: left;  
+		margin-left: 3.33333%;  
+		min-height: 1px; 
+	} 
+	.col-1-2{
+		width: 44.99999%;
+	}
+	.col-1-4{
+		width: 93.33333%;
+	}
+	.col-2{
+		width: 44.99999%;
+	}
+	.col-3{
+		width: 93.33333%;
+	}
+	.col-4{
+		width: 93.33333%;
+	}
+} /* end 480x767 media query */
+
+@media only screen and (max-width: 479px) { 
+	[class*='col-'] {  
+		margin:0;  
+		width:100%; 
+	} 
+} /* end 479 media query */
+
+@media only screen and (min-width: 702px) and (max-width: 866px)  { 
+	main h2 {  
+		font-size:2.5em;  
+		padding-top: 0px; 
+	}
+}
