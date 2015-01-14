@@ -76,10 +76,12 @@ nav ul a:hover {
 	background-color: #EFECCA;
 }*/
 .wrapper h4 {
+	text-align: center;
 	font-size: 1.55em;
 	margin: .1em;
 }
 .wrapper h5 {
+	text-align: center;
 	font-size: .75em;
 	margin-top: .1em;
 }
