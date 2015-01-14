@@ -11,7 +11,7 @@ html {
 
 body {
 	font-family: Arial, Geneva, sans-serif;
-	background-color: #B1D3EE;
+	background-image: url("img/background.jpg");
 	font-size: 100%;
 }
 h1,
@@ -31,26 +31,50 @@ a {
 	margin: 0 auto;
 	float: none;
 	background-color: #fff;
+	margin-top:85px;
+	overflow:hidden;
+}
+
+header {
+	position:fixed;
+	background-color:#b11101;
+	color:white;
+	clear:both;
+	width:100%;
+	top:0;
+	height:50px;
+	left:0;
+	display: block;
+	margin-bottom: 0px;
 
 }
-header {
-	background: url(../img/boston-1200.jpg) no-repeat;
-	width: 100%; /*as wide as the .wrapper*/
-	height: 218px; /*as tall as it needs to be i.e. the height of the text inside*/
-	font-family: 'Cabin Condensed', sans-serif; 
-	color: #fff;
-}
 header h1 {
+	font-family: 'Yanone Kaffeesatz', Arial, cursive, sans-serif;
 	padding: 0.5em;
-	margin: 0;
+	margin-top: 0px;
+	padding-top: 2px;
+	color:black;
+	text-align: right;
 }
 header h1 a {
 	color: #fff;
 	text-decoration: none;
 }
-nav {
-	background-color: #ED8F00;
+
+nav{
+	font-family: 'Lobster', Arial, cursive;
+	position:fixed;
+	background-color:#000;
+	color:white;
+	clear:both;
+	width:100%;
+	top:50px;
+	/*height:40px;*/
+	left:0;
+	border-bottom: 3px solid black;
+	clear: both;
 }
+
 nav ul {
 	margin: 0;
 	padding: 0;
@@ -59,6 +83,7 @@ nav ul {
 }
 nav ul li {
 	font-family: 'Cabin Condensed', sans-serif;
+	text-align: center;
 }
 nav ul a {
 	color: #fff;
@@ -66,6 +91,7 @@ nav ul a {
 	font-weight: bold;
 	padding: 1em;
 	float: left;
+	text-align: center;
 }
 nav ul a:hover {
 	color: #a16100;
