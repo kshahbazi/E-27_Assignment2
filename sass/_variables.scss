@@ -1,0 +1,25 @@
+/* my variables */
+
+$font-body: Arial, Geneva, sans-serif;
+$font-primary: 'Sigmar One', sans-serif;
+$font-secondary:'PT Sans Narrow', sans-serif;
+	
+$color-primary: #b11101; 
+$color-primary-dark: darken($color-primary, 40%);
+$color-light: #fff;
+
+$color-secondary: #2E2E2E;
+$color-secondary-dark: darken($color-secondary, 20%);
+
+$color-highlight: #EFECCA;
+
+
+/* font sizes */
+
+$h2-primary: 3em;
+$p-primary: 1.5em;
+
+/* grid system */
+$number-of-cols: 4;
+
+$col-margin: 3.33333%;

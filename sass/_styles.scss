@@ -11,17 +11,10 @@ html {
 
 body {
 	font-family: Arial, Geneva, sans-serif;
-	background-image: url("../background.jpg");
+	background-image: url("../img/background.jpg");
 	font-size: 100%;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: 'Cabin Condensed', sans-serif;
-}
+
 a {
 	color: #2772B0;
 }
@@ -30,7 +23,7 @@ a {
 header {
 	position:fixed;
 	background-color:#fff;
-	border-bottom: 5px solid #b11101;
+	border-bottom: 5px solid $color-primary;
 	clear:both;
 	width:100%;
 	top:0;
@@ -41,7 +34,7 @@ header {
 
 }
 header h1 {
-	font-family: 'Sigmar One', sans-serif;
+	font-family: $font-primary;
 	padding: 0.5em;
 	margin-top: 0px;
 	padding-top: 2px;
@@ -49,19 +42,19 @@ header h1 {
 	text-align: right;
 }
 header h1 a {
-	color: #b11101;;
+	color: $color-secondary;
 	text-decoration: none;
 }
 
 header h1 a:hover {
-	color: #000;
+	color: $color-primary;
 }
 
 nav{
-	font-family: 'Sigmar One', sans-serif;
+	font-family: $font-primary;
 	font-size:1.1em;
 	position:fixed;
-	background-color:#2E2E2E;
+	background-color: $color-secondary;
 	color:white;
 	clear:both;
 	width:100%;
@@ -91,7 +84,7 @@ nav ul a {
 	text-align: center;
 }
 nav ul a:hover {
-	color: #b11101;
+	color: $color-primary;
 	font-style: italic;
 	text-decoration:underline;
 }
@@ -108,7 +101,7 @@ nav ul a:hover {
 	padding-bottom: 5px;
 }
 .wrapper h4 {
-	font-family: 'PT Sans Narrow', sans-serif;
+	font-family: $font-secondary;
 	text-align: center;
 	font-size: 1.15em;
 	margin-bottom: 0px;
@@ -116,7 +109,7 @@ nav ul a:hover {
 	margin-top: 0px;
 }
 .wrapper h5 {
-	font-family: 'PT Sans Narrow', sans-serif;
+	font-family: $font-secondary;
 	text-align: center;
 	font-size: .75em;
 	padding-top: 0px;
@@ -140,11 +133,11 @@ nav ul a:hover {
 	margin-left: 1.5em;
 }*/
 footer {
-	font-family: 'Sigmar One', sans-serif;
+	font-family: $font-primary;
 	clear: both;
 	padding: 2em 0;
 	margin: 3em 0;
-	color: #b11101;;
+	color: $color-primary;;
 	text-align: center;
 }
 
@@ -233,6 +226,5 @@ footer {
 	.movie-posters .col-1{
 		/*make the box shorter so it doesn't look empty*/
 		height: 295px;
-	}
 	}
 }
