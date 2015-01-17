@@ -530,9 +530,12 @@ footer {
     width: 100%; }
 
   .wrapper.movie-posters img {
-    height: 85%;
+    height: 80%;
     margin-top: 1px;
-    margin-bottom: 1px; } }
+    margin-bottom: 1px; }
+
+  .col-1 {
+    height: 375px; } }
 /* end 479 media query */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   [class*='col-'] {
