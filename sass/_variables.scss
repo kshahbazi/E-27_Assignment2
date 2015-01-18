@@ -5,11 +5,12 @@ $font-primary: 'Sigmar One', sans-serif;
 $font-secondary:'PT Sans Narrow', sans-serif;
 	
 $color-primary: #b11101; 
-$color-primary-dark: darken($color-primary, 40%);
+$color-primary-dark: darken($color-primary, 10%);
 
 $color-secondary: #2E2E2E;
 $color-secondary-dark: darken($color-secondary, 20%);
 
+$color-anchor: #2772B0;
 
 /* font sizes */
 $h2-primary: 3em;

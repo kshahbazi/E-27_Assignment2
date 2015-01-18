@@ -16,7 +16,7 @@ body {
 }
 
 a {
-	color: #2772B0;
+	color: $color-anchor;
 }
 
 
@@ -54,7 +54,6 @@ nav{
 	position:fixed;
 	background-color: $color-secondary;
 	color:white;
-	clear:both;
 	width: $width-full;
 	top:50px;
 	left:0;
@@ -99,17 +98,18 @@ nav ul {
 	overflow:hidden;
 	padding-bottom: 5px;
 	text-align: center;
-	//nesting
+	/* sass nesting */
+	h4, h5 {
+		margin-top: 0px;
+	}
 	h4 {
 		font-size: 1.15em;
 		margin-bottom: 0px;
-		// padding-bottom: 0px;
-		margin-top: 0px;
 	}
 	h5 {
 		font-size: .75em;
-		// padding-top: 0px;
-		margin-top: 0px;
+		/* mix $color-primary, $color-secondary */ 
+		color: mix($color-primary, $color-secondary, 60%)
 	}
 	img {
 		margin-top: 4px;
@@ -128,11 +128,7 @@ nav ul {
 
 footer {
 	font-family: $font-primary;
-	clear: both;
-	padding: 2em 0;
-	margin: 3em 0;
-	color: $color-primary;;
-	text-align: center;
+	@include clearfix();
 }
 
 /* grid system */
@@ -151,7 +147,8 @@ footer {
 	min-height: 1px;
 	width: 21%;
 	height: 355px;
-	border: 1px solid black;
+	@include std-border(1px, solid, $color-secondary-dark);
+	//border: 1px solid black;
 	img{
 		margin-left: auto;
 		margin-right: auto;
@@ -205,8 +202,8 @@ footer {
 		font-size: .75em;
 	}
 	.row:after {
-		  /*change from default display:table */
-		  /*so an empty box or col is not breaking up the flow */
+		  /* change from default display:table */
+		  /* so an empty box or col is not breaking up the flow */
 		  display: none; 
 	}
 } /* end 480x767 media query */
@@ -216,7 +213,7 @@ footer {
 		font-size: .9em;
 	}
 	.music-albums .col-1{ 
-		/*make the box shorter so it doesn't look empty*/
+		/* make the box shorter so it doesn't look empty */
 		height: 255px;
 	}
 	.movie-posters img{
@@ -224,8 +221,8 @@ footer {
 		height: 72%;
 	}
 	.movie-posters .col-1{
-		/*m ake the box shorter so it doesn't look empty*/
-		// movie posters have different dimensions ratios from albums 
+		/* make the box shorter so it doesn't look empty */
+		/* movie posters have different dimension ratios from albums */
 		height: 295px;
 	}
 }
