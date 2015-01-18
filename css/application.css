@@ -385,29 +385,26 @@ a {
 header {
   position: fixed;
   background-color: #fff;
+  margin-bottom: 0px;
   border-bottom: 5px solid #b11101;
   clear: both;
   width: 100%;
   top: 0;
-  height: 50px;
   left: 0;
-  display: block;
-  margin-bottom: 0px; }
-
-header h1 {
-  font-family: "Sigmar One", sans-serif;
-  padding: 0.5em;
-  margin-top: 0px;
-  padding-top: 2px;
-  color: black;
-  text-align: right; }
-
-header h1 a {
-  color: #2E2E2E;
-  text-decoration: none; }
-
-header h1 a:hover {
-  color: #b11101; }
+  height: 50px;
+  display: block; }
+  header h1 {
+    font-family: "Sigmar One", sans-serif;
+    padding: 0.5em;
+    margin-top: 0px;
+    padding-top: 2px;
+    color: black;
+    text-align: right; }
+    header h1 a {
+      color: #2E2E2E;
+      text-decoration: none; }
+      header h1 a:hover {
+        color: #b11101; }
 
 nav {
   font-family: "Sigmar One", sans-serif;
@@ -428,26 +425,24 @@ nav ul {
   list-style-type: none;
   overflow: auto;
   text-align: center; }
-
-nav ul li {
-  text-align: center;
-  float: right; }
-
-nav ul a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 1em;
-  float: left;
-  text-align: center; }
-
-nav ul a:hover {
-  color: #b11101;
-  font-style: italic;
-  text-decoration: underline; }
+  nav ul li {
+    text-align: center;
+    float: right; }
+  nav ul a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1em;
+    float: left;
+    text-align: center; }
+    nav ul a:hover {
+      color: #b11101;
+      font-style: italic;
+      text-decoration: underline; }
 
 /*main elements and classes*/
 .wrapper {
+  font-family: "PT Sans Narrow", sans-serif;
   width: 97%;
   /*could be 100%*/
   max-width: 1200px;
@@ -456,33 +451,25 @@ nav ul a:hover {
   background-color: #fff;
   margin-top: 115px;
   overflow: hidden;
-  padding-bottom: 5px; }
-
-.wrapper h4 {
-  font-family: "PT Sans Narrow", sans-serif;
-  text-align: center;
-  font-size: 1.15em;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  margin-top: 0px; }
-
-.wrapper h5 {
-  font-family: "PT Sans Narrow", sans-serif;
-  text-align: center;
-  font-size: .75em;
-  padding-top: 0px;
-  margin-top: 0px; }
+  padding-bottom: 5px;
+  text-align: center; }
+  .wrapper h4 {
+    font-size: 1.15em;
+    margin-bottom: 0px;
+    margin-top: 0px; }
+  .wrapper h5 {
+    font-size: .75em;
+    margin-top: 0px; }
+  .wrapper img {
+    margin-top: 4px;
+    margin-bottom: 1px; }
 
 .wrapper.music-albums img {
-  width: 95%;
-  margin-top: 4px;
-  margin-bottom: 1px; }
+  width: 95%; }
 
 .wrapper.movie-posters img {
   width: 80%;
-  height: 80%;
-  margin-top: 4px;
-  margin-bottom: 1px; }
+  height: 80%; }
 
 footer {
   font-family: "Sigmar One", sans-serif;
@@ -495,25 +482,22 @@ footer {
 /* grid system */
 .row {
   margin-top: 20px; }
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both; }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 .col-1 {
   float: left;
   margin-left: 3.33333%;
-  /*Sass will only look at five digits after decimal*/
   min-height: 1px;
   width: 21%;
   height: 355px;
   border: 1px solid black; }
-
-.col-1 img {
-  margin-left: auto;
-  margin-right: auto;
-  display: block; }
+  .col-1 img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
 
 @media only screen and (max-width: 479px) {
   [class*='col-'] {
@@ -528,6 +512,9 @@ footer {
   .col-1 {
     height: 375px; } }
 /* end 479 media query */
+@media only screen and (max-width: 599px) {
+  body {
+    background-image: url("../img/background_tiny.jpg"); } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   [class*='col-'] {
     float: left;
@@ -567,7 +554,7 @@ footer {
     height: 72%; }
 
   .movie-posters .col-1 {
-    /*make the box shorter so it doesn't look empty*/
+    /*m ake the box shorter so it doesn't look empty*/
     height: 295px; } }
 
 /*# sourceMappingURL=application.css.map */

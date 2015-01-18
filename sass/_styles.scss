@@ -23,31 +23,29 @@ a {
 header {
 	position:fixed;
 	background-color:#fff;
+	margin-bottom: 0px;
 	border-bottom: 5px solid $color-primary;
 	clear:both;
-	width:100%;
+	width: $width-full;
 	top:0;
-	height:50px;
 	left:0;
+	height:50px;
 	display: block;
-	margin-bottom: 0px;
-
-}
-header h1 {
-	font-family: $font-primary;
-	padding: 0.5em;
-	margin-top: 0px;
-	padding-top: 2px;
-	color:black;
-	text-align: right;
-}
-header h1 a {
-	color: $color-secondary;
-	text-decoration: none;
-}
-
-header h1 a:hover {
-	color: $color-primary;
+	h1 {
+		font-family: $font-primary;
+		padding: 0.5em;
+		margin-top: 0px;
+		padding-top: 2px;
+		color:black;
+		text-align: right;
+		a {
+		color: $color-secondary;
+		text-decoration: none;
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
 }
 
 nav{
@@ -57,7 +55,7 @@ nav{
 	background-color: $color-secondary;
 	color:white;
 	clear:both;
-	width:100%;
+	width: $width-full;
 	top:50px;
 	left:0;
 	border-bottom: 3px solid black;
@@ -70,27 +68,28 @@ nav ul {
 	list-style-type: none;
 	overflow: auto;
 	text-align: center;
-}
-nav ul li {
-	text-align: center;
-	float:right;
-}
-nav ul a {
-	color: #fff;
-	text-decoration: none;
-	font-weight: bold;
-	padding: 1em;
-	float: left;
-	text-align: center;
-}
-nav ul a:hover {
-	color: $color-primary;
-	font-style: italic;
-	text-decoration:underline;
+	li {
+		text-align: center;
+		float:right;
+	}
+	a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		padding: 1em;
+		float: left;
+		text-align: center;
+		&:hover {
+			color: $color-primary;
+			font-style: italic;
+			text-decoration:underline;
+		}
+	}
 }
 
 /*main elements and classes*/
 .wrapper {
+	font-family: $font-secondary;
 	width: 97%; /*could be 100%*/
 	max-width: 1200px;
 	margin: 0 auto;
@@ -99,34 +98,32 @@ nav ul a:hover {
 	margin-top:115px;
 	overflow:hidden;
 	padding-bottom: 5px;
-}
-.wrapper h4 {
-	font-family: $font-secondary;
 	text-align: center;
-	font-size: 1.15em;
-	margin-bottom: 0px;
-	padding-bottom: 0px;
-	margin-top: 0px;
-}
-.wrapper h5 {
-	font-family: $font-secondary;
-	text-align: center;
-	font-size: .75em;
-	padding-top: 0px;
-	margin-top: 0px;
+	//nesting
+	h4 {
+		font-size: 1.15em;
+		margin-bottom: 0px;
+		// padding-bottom: 0px;
+		margin-top: 0px;
+	}
+	h5 {
+		font-size: .75em;
+		// padding-top: 0px;
+		margin-top: 0px;
+	}
+	img {
+		margin-top: 4px;
+		margin-bottom: 1px;
+	}
 }
 
 .wrapper.music-albums img {
 	width:95%;
-	margin-top: 4px;
-	margin-bottom: 1px;
 }
 
 .wrapper.movie-posters img{
 	width:80%;
 	height: 80%;
-	margin-top: 4px;
-	margin-bottom: 1px;
 }
 
 footer {
@@ -141,31 +138,32 @@ footer {
 /* grid system */
 .row{
 	margin-top:20px;
-}
-.row:after {
-  content: "";
-  display: table; 
-  clear: both;
+	&:after {
+		  content: "";
+		  display: table; 
+		  clear: both;
+	}
 }
 
 .col-1{
 	float:left;
-	margin-left:3.33333%; /*Sass will only look at five digits after decimal*/
+	margin-left:$col-margin; 
 	min-height: 1px;
 	width: 21%;
 	height: 355px;
 	border: 1px solid black;
-}
-.col-1 img{
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
+	img{
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
 }
 
 @media only screen and (max-width: 479px) { 
+	
 	[class*='col-'] {  
 		margin:0;  
-		width:100%; 
+		width: $width-full; 
 	} 
 	.wrapper.movie-posters img{
 		height: 80%;
@@ -176,6 +174,13 @@ footer {
 		height: 375px;
 	}
 } /* end 479 media query */
+
+@media only screen and (max-width: 599px)  { 
+	// loading alternate small background image for mobile devices up to 600px
+	body {
+		background-image: url("../img/background_tiny.jpg");
+	}
+}
 
 @media only screen and (min-width: 480px) and (max-width: 767px)  { 
 	[class*='col-'] {  
@@ -219,7 +224,8 @@ footer {
 		height: 72%;
 	}
 	.movie-posters .col-1{
-		/*make the box shorter so it doesn't look empty*/
+		/*m ake the box shorter so it doesn't look empty*/
+		// movie posters have different dimensions ratios from albums 
 		height: 295px;
 	}
 }
