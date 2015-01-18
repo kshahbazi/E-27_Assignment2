@@ -128,10 +128,7 @@ nav ul a:hover {
 	margin-top: 4px;
 	margin-bottom: 1px;
 }
-/*div {
-	float: left;
-	margin-left: 1.5em;
-}*/
+
 footer {
 	font-family: $font-primary;
 	clear: both;
@@ -151,11 +148,6 @@ footer {
   clear: both;
 }
 
-/*[class *='col-']{
-	float:left;
-	margin-left:3.33333%; Sass will only look at five digits after decimal
-	min-height: 1px;
-}*/
 .col-1{
 	float:left;
 	margin-left:3.33333%; /*Sass will only look at five digits after decimal*/
